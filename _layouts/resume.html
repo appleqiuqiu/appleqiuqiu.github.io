@@ -135,6 +135,27 @@
       </section>
       <!-- end Recognition -->
       {% endif %}
+      
+      {% if site.resume_section_skills %}
+      <!-- begin Skills -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>发表论文（中文）</h2>
+        </header>
+        <div class="resume-item">
+          <ul class="resume-item-list">
+            {% for skill in site.data.skills %}
+            <li>{{ skill.description }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        
+
+      </section>
+    
+      <!-- end Skills -->
+      {% endif %}
 
 
       {% if site.resume_section_experience %}
@@ -177,23 +198,7 @@
       <!-- end Projects -->
       {% endif %}
 
-      {% if site.resume_section_skills %}
-      <!-- begin Skills -->
-      <section class="content-section">
-
-        <header class="section-header">
-          <h2>研究兴趣</h2>
-        </header>
-        {% for skill in site.data.skills %}
-        <div class="resume-item">
-          <h4 class="resume-item-details">{{ skill.skill }}</h4>
-          <p class="resume-item-copy">{{ skill.description }}</p>
-        </div>
-        {% endfor %}
-
-      </section>
-      <!-- end Skills -->
-      {% endif %}
+      
 
 
      
