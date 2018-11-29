@@ -115,6 +115,26 @@
       <!-- end Associations -->
       {% endif %}
       
+        
+      {% if site.resume_section_recognition %}
+      <!-- begin Recognition -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>发表论文（英文）</h2>
+        </header>
+        <div class="resume-item">
+          <ul class="resume-item-list">
+            {% for recognition in site.data.recognitions %}
+            <li>{{ recognition.description }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        
+
+      </section>
+      <!-- end Recognition -->
+      {% endif %}
 
 
       {% if site.resume_section_experience %}
@@ -175,25 +195,6 @@
       <!-- end Skills -->
       {% endif %}
 
-      {% if site.resume_section_recognition %}
-      <!-- begin Recognition -->
-      <section class="content-section">
-
-        <header class="section-header">
-          <h2>发表论文（中文）</h2>
-        </header>
-        <div class="resume-item">
-          <ul class="resume-item-list">
-            {% for recognition in site.data.recognitions %}
-            <li>{{ recognition.description }}</li>
-            {% endfor %}
-          </ul>
-        </div>
-        
-
-      </section>
-      <!-- end Recognition -->
-      {% endif %}
 
       
       
